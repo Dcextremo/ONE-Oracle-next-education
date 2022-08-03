@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+    <!--Esta es una alternativa para interactuar con el usuario pero desde campos creados en el HTML
+        No se incluye ningún tipo de estilo en la página para que sea facil de comprender
+
+        No incluyo las funciones de salto de linea ni imprimir, pero es posible incluirlas si se requiere.-->
+
+    <SCRIPT LANGUAGE="JavaScript">
+
+    // Esta función lee valores de los campos en la pagina y realiza el cálculo del IMC
+    // la función se ejecuta cuando se pulsa un clic sobre el botón en el formulario
+
+    function calcimc() {
+        var nombre = document.getElementById("nombre").value  // Obtiene el valor del campo nombre en el HTML
+        var altura = document.getElementById("altura").value  // Obtiene el valor del campo altura en el HTML
+        var peso = document.getElementById("peso").value      // Obtiene el valor del campo peso en el HTML
+
+        // Dos métodos de desplegar el resultado, una utilizando alert y la otra modificando el valor de la etiqueta
+        // llamada salida en el HTML.
+        alert (nombre + " tu índice de masa corporal es: " + peso/ (altura*altura));  
+        document.getElementById('salida').innerHTML=nombre+" tu masa corporal es "+ peso/ (altura*altura);
+    }
+    </SCRIPT>
+
+    <!-- Un formulario muy simple.  Con la etiqueta label podemos interactuar con el usuario para solicitar ingreso de datos
+         Se crean 3 campos y una etiqueta.  Esta etiqueta salida es la que modifica la función en JavaScript para mostrar el
+         resultado.-->
+
+    <label for="nombre">Nombre:</label><input type="text" id= "nombre" name="nombre" > 
+    <br>
+    <label for="altura">Altura:</label><input type="text" id= "altura" name="altura" > 
+    <br>
+    <label for="peso">Peso:</label><input type="text" id= "peso" name="peso" > 
+    <br>
+    <br>
+    <label id="salida"></label>
+    <br>
+    <br>
+    <button onclick="calcimc()">Calcular IMC</button>  <!-- Crea el botón que al pulsarlo se ejecuta la función que calcula el imc -->
