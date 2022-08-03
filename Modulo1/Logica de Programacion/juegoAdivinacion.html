@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<h1>Juego Adivinacion</h1>
+
+<script>
+
+    function saltarLinea() {
+            document.write("<br>");    
+            document.write("<br>");    
+            document.write("<hr>");
+            document.write("<br>");
+            document.write("<br>");   
+    }  
+    function imprimir(frase) {
+            document.write("<big>"+frase+"</big>");
+            saltarLinea();
+    }
+    function sortear(n)
+    {
+        return Math.round(Math.random()*n);
+    }
+    //var numeroPensado=Math.round(Math.random()*10); //valor random entre 0 y 10
+    var n=parseInt(prompt("Ingrese el rango a sortear:"));
+    var numeroPensado=sortear(n);
+    var numeroLanzado=parseInt(prompt("Ingrese un numero entre 0-"+n+":"));
+
+    if(numeroPensado==numeroLanzado)
+    {
+        imprimir("Felicidades, usted acertó!!");
+    }
+    else if(numeroPensado>numeroLanzado)
+    {
+        imprimir("Que lastima!, el numero pensado es mayor ("+numeroPensado+")");  
+    }
+    else if(numeroPensado<numeroLanzado)
+    {
+        imprimir("Que lastima!, el numero pensado es menor ("+numeroPensado+")");
+    }
+
+</script>

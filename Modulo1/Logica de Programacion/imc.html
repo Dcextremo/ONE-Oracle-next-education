@@ -3,41 +3,53 @@
 
 <script>
 
-function saltarLinea() {
-        document.write("<br>");    
-        document.write("<br>");    
-        document.write("<hr>");
-        document.write("<br>");
-        document.write("<br>");   
-}  
-function imprimir(frase) {
-        document.write("<big>"+frase+"</big>");
-        saltarLinea();
-}
-function calcularImc(peso,altura)
-{
-    return peso/(altura*altura);  
-}
-function promedioImc(imc1,imc2)
-{
-    return (imc1+imc2)/2;
-}
-var nombre=prompt("ingrese su nombre: ");
-var peso=prompt(nombre+", ingrese su peso: ");
-var altura=prompt(nombre+", ingrese su altura: ");
+    function saltarLinea() {
+            document.write("<br>");    
+            document.write("<br>");    
+            document.write("<hr>");
+            document.write("<br>");
+            document.write("<br>");   
+    }  
+    function imprimir(frase) {
+            document.write("<big>"+frase+"</big>");
+            saltarLinea();
+    }
+    function calcularImc(peso,altura)
+    {
+        return peso/(altura*altura);  
+    }
+    function promedioImc(imc1,imc2)
+    {
+        return (imc1+imc2)/2;
+    }
+    var nombre=prompt("ingrese su nombre: ");
+    var peso=prompt(nombre+", ingrese su peso: ");
+    var altura=prompt(nombre+", ingrese su altura: ");
 
-imprimir(nombre+", su IMC calculado es: "+calcularImc(peso,altura));
+    imprimir(nombre+", su IMC calculado es: "+calcularImc(peso,altura)+"%");
+    imc=calcularImc(peso,altura);
+    imprimir("Clasificacion de su IMC es: ");
+    if(imc<18.5)
+    {
+        imprimir("Insuficiencia ponderal");
+    }
+    else if(imc>=18.5 && imc<24.9)
+    {
+        imprimir("intervalo normal");
+    }
+    else if(imc>=25 && imc<29.9)
+    {
+        imprimir("sobrepeso");
+    }
+    else if(imc>=30)
+    {
+        imprimir("obesidad");
+    }
 
-
-
-
-
-//imc1=calcularImc(71,1.72);
-//imc2=calcularImc(75,1.73);
-//imprimir("El IMC calculado de Christian es: "+imc1);
-//imprimir("El IMC calculado de Felipe es: "+imc2);
-//imprimir("El promedio de las imc es: "+promedioImc(imc1,imc2));
-
-
+    //imc1=calcularImc(71,1.72);
+    //imc2=calcularImc(75,1.73);
+    //imprimir("El IMC calculado de Christian es: "+imc1);
+    //imprimir("El IMC calculado de Felipe es: "+imc2);
+    //imprimir("El promedio de las imc es: "+promedioImc(imc1,imc2));
 
 </script>
