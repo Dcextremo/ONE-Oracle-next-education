@@ -18,22 +18,41 @@
     {
         return Math.round(Math.random()*n);
     }
-    //var numeroPensado=Math.round(Math.random()*10); //valor random entre 0 y 10
-    var n=parseInt(prompt("Ingrese el rango a sortear:"));
-    var numeroPensado=sortear(n);
-    var numeroLanzado=parseInt(prompt("Ingrese un numero entre 0-"+n+":"));
+    var numeroPensado=Math.round(Math.random()*10); //valor random entre 0 y 10
+    
+   /*  var n=parseInt(prompt("Ingrese el rango a sortear:"));
+    var numeroPensado=sortear(n); */
+    
+    var intentos=parseInt(prompt("Ingrese los intentos que desea realizar:"));
+    var contador=1;
+    while(contador<=intentos)
+    {
+        var numeroLanzado=parseInt(prompt("Ingrese un numero entre 0-10:"));
 
+        if(numeroPensado==numeroLanzado)
+        {
+            alert("Felicidades, usted acertó!! logro adivinar en el "+contador+"°"+" intento");
+            break;
+        }
+        else if(numeroPensado>numeroLanzado)
+        {
+            alert("Pista! el numero pensado es mayor");  
+        }
+        else if(numeroPensado<numeroLanzado)
+        {
+            alert("Pista! el numero pensado es menor");
+        }
+        contador++;
+
+    }
     if(numeroPensado==numeroLanzado)
-    {
-        imprimir("Felicidades, usted acertó!!");
-    }
-    else if(numeroPensado>numeroLanzado)
-    {
-        imprimir("Que lastima!, el numero pensado es mayor ("+numeroPensado+")");  
-    }
-    else if(numeroPensado<numeroLanzado)
-    {
-        imprimir("Que lastima!, el numero pensado es menor ("+numeroPensado+")");
-    }
+        {
+            imprimir("Felicidades, usted acertó!! logro adivinar en el "+contador+"°"+" intento");
+            
+        }
+        else 
+        {
+            imprimir("Intentos terminados, el numero a adivinar era "+numeroLanzado);
+        }
 
 </script>
