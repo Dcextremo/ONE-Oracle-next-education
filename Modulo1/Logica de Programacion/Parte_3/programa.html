@@ -1,0 +1,38 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+    var pantalla=document.querySelector("canvas"); //Conecta con el campo canvas
+    var pincel=pantalla.getContext("2d");   //El encargado de dibujar/trabajar en canvas.
+
+    pincel.fillStyle= "lightgrey"; //Color fondo de pantalla 
+    pincel.fillRect(0,0,600,400); //Dibuja un rectagulo con coordenadas en su parametro.
+
+    pincel.fillStyle= "green"; 
+    pincel.fillRect(0,0,200,400);
+
+    pincel.fillStyle= "red"; 
+    pincel.fillRect(400,0,600,400); 
+
+    pincel.fillStyle="yellow";
+    pincel.beginPath();// Comienza un camino
+    pincel.moveTo(300,200); //Mover al centro.
+    pincel.lineTo(200,400);
+    pincel.lineTo(400,400);
+    pincel.fill(); //Rellena 
+
+    pincel.fillStyle="blue";
+    pincel.beginPath();
+    pincel.arc(300,200,50,0,2*3.14) //Dibuja circufencia
+    pincel.fill();
+
+
+    /*
+    pincel.fillStyle = "green";
+    pincel.fillRect(0,0,600,400);
+    La instrucción pincel.fillStyle es una propiedad del objeto pincel y se le está atribuyendo el color verde.
+    Por su parte, la instrucción pincel.fillRect() es una función (método) del objeto pincel 
+    que en nuestro código la usábamos para diseñar (dibujar) las figuras. */
+
+</script>
