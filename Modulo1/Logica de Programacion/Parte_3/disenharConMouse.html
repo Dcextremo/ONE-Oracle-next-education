@@ -1,0 +1,118 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+    var color="blue"; 
+    function dibujarCirculo(evento) {
+       
+        if(puedoDibujar) {
+            var x = evento.pageX -pantalla.offsetLeft;
+            var y = evento.pageY -pantalla.offsetTop;
+            //pincel.fillStyle = color;
+            if(limitarArea)
+            {
+                pincel.beginPath();
+                pincel.arc(x, y, 5, 0, 2 * 3.14);
+                pincel.fill();
+            }
+           
+        }
+
+    }
+
+    function habilitarDibujar() {
+
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+
+        puedoDibujar = false;
+    }
+
+    //---------------DESAFIO---------------------------
+
+    function crearPaleta()
+    {
+        pincel.fillStyle = 'red';
+        pincel.fillRect(0, 0, 50, 50);
+
+        pincel.fillStyle = 'green';
+        pincel.fillRect(50, 0, 50, 50);
+
+        pincel.fillStyle = 'blue';
+        pincel.fillRect(100, 0, 50, 50);
+   
+    }
+    function cambiarColor(color)
+    {
+        pincel.fillStyle = color;
+    }
+    function eligirColor(evento)
+    {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if((x<xPaletaRoja)&&(y<yPaletaRoja))
+        {
+            alert("Color Rojo");
+            cambiarColor("red");
+            ubicacionPincel=true;
+        }
+        else
+            if((x<xPaletaVerde)&&(y<yPaletaVerde))
+            {
+                alert("Color Verde"); 
+                cambiarColor("green");
+                ubicacionPincel=true;
+            }
+            else 
+                if((x<xPaletaAzul)&&(y<yPaletaAzul))
+                {
+                    alert("Color Azul"); 
+                    cambiarColor("blue");
+                    
+                }
+
+    }
+    function limitarArea(x,y)
+    {
+        if((x>=0 && x<(3*50+pantalla.offsetLeft)) && (y>=0 && y<(50+pantalla.offsetTop)))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+   
+   
+    var xPaletaRoja=50;
+    var yPaletaRoja=50;
+
+    var xPaletaVerde=100;
+    var yPaletaVerde=50;
+
+    var xPaletaAzul=150;
+    var yPaletaAzul=50;
+
+    var ubicacionPincel=false;
+
+    crearPaleta();
+    
+    pantalla.onclick=eligirColor;
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    pantalla.onmousedown = habilitarDibujar;
+
+    pantalla.onmouseup = deshabilitarDibujar;
+    
+
+</script>
