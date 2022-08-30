@@ -1,0 +1,255 @@
+html
+{
+    width: 100%;
+    min-height: 100vh;
+}
+body
+{
+    position: relative;
+    width: 1440px;
+    height: 1024px; 
+    font-family: 'DynaPuff', cursive;
+    /* Light blue/light-blue-100 */
+
+    background: linear-gradient(#9dafec,rgb(147, 236, 147)) ;
+    
+    
+} 
+header
+{
+    padding: 20px 0;
+}
+.logo
+{
+        /* Logo */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+.ingreso
+{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    /* identical to box height, or 48px */
+
+
+    /* Dark blue/dark-blue-300 */
+
+    color: #0A3871;
+}
+.input-texto
+{
+    background: transparent;
+    border: transparent;
+    flex: 60%;
+    padding-left: 10%;
+    font-size: 25px;
+    outline: none;
+    resize: none;
+    cursor: pointer;
+    font-family: 'DynaPuff', cursive;
+}
+
+.botones
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+    margin-top: -15%;
+}
+.encriptar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 3%;
+    gap: 8px;
+    width: 40%;
+    height: 100%;
+    background: rgb(8 160 108);
+    border-radius: 45px;
+    flex: 0 0 auto;
+    order: 0;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+
+}
+
+.encriptar:hover
+{
+    opacity: 30%;
+}
+.desencriptar
+{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 3%;
+    gap: 8px;
+    width: 40%;
+    height: 100%;
+    background: #a4b422;
+    border: 1px solid #0A3871;
+    border-radius: 45px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+}
+.desencriptar:hover
+{
+    opacity: 30%;
+}
+.mensaje-encriptado
+{
+    position: absolute;
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* shadow */
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    font-family: 'DynaPuff', cursive;
+}
+.rectangulo
+{
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    left: 70%;
+    top: 10%;
+
+    /* White */
+
+    background: #ece8e8;
+    /* shadow */
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    
+}
+.muñeco
+{
+    position: relative;
+    width: 70%;
+    top: 5%;
+    left: 19%;
+    text-align: center;
+}
+.muñeco:hover
+{
+    opacity: 20%;
+}
+.mensaje
+{
+    position: relative;
+    width: 70%;
+    height: 29%;
+    left: 5%;
+    top: 10%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #fbfdff;
+    margin-top: -5%;
+    background: transparent;
+    border: transparent;
+}
+.ningunMensaje
+{
+    position: relative;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+.ingresar
+{
+    position: relative;
+    text-align: center;
+    font-size: .9em;
+    top: 3%;
+}
+.copiar
+{
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    position: relative;
+    width: 20;
+    height: 67px;
+    left: 40%;
+    top: 30%;
+    border: 1px solid rgb(10, 56, 113);
+    border-radius: 24px;
+    justify-content: center;
+    margin-top: -23%;
+    font-family: 'DynaPuff', cursive;
+}
+
+.copiar:hover
+{
+    opacity: 30%;
+    transform: scale(1.1);
+}
+footer
+{
+    position: absolute;
+    font-family: 'DynaPuff', cursive;
+    text-align: center;
+    font-weight: bold;
+    bottom: 7%;
+    margin-left: 50%;
+    
+}
+.iconos
+{
+   
+}
+.logoLinkedin
+{
+   
+}
+.logoLinkedin:hover
+{
+    opacity: 30%;
+    cursor: pointer;
+    filter: invert(100%);
+}

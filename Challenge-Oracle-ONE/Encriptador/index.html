@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+    
+</head>
+<body>
+    <header>
+        <img src="Imagenes/Logo-1.png" alt="Logo de alura con la inicial letra a" class="logo">
+    </header>
+    <main>
+        <section class="ingreso">
+            <textarea class="input-texto" cols="40" rows="6" placeholder="Ingrese el texto aqui"></textarea>
+        </section>
+        <div class="botones">
+            <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
+            <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+        </div>
+        <section class="rectangulo">
+            
+            <textarea class="mensaje" cols="18" rows="8"></textarea>
+            <img src="imagenes/Muñeco.png" alt="Imagen de busqueda" class="muñeco">
+            <p class="ningunMensaje">Ningún mensaje fue encontrado</p>
+            <p class="ingresar">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <button class="copiar" onclick="copiar()">Copiar</button >
+
+            
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        <div class="iconos">
+            <img src="imagenes/icons8-linkedin.svg" alt="logo linkedin" class="logoLinkedin">
+
+        </div>
+        <p>© Copyright Daniel Castillo 2022</p>
+    </footer>
+</body>
+</html>
